@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<table id="table">
+    <tr>
+        <td>
+            <button onclick="click1()">
+                <img id="top" src="Cho1.jpg" style="width: 500px;height:250px">
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="click2()">
+                <img id="lower" src="Meo2.jpg" style="width: 500px;height: 250px">
+            </button>
+        </td>
+    </tr>
+    <script>
+        let arr =["Cho1.jpg","Meo1.jpg"];
+        let arr2 =["Cho2.jpg","Meo2.jpg"];
+        let count1=1;
+        let count2=1;
+        function click1() {
+            document.getElementById("top").src=arr[count1];
+            count1++;
+            if(count1 == 2){
+                count1 = 0;
+            }
+            if(count1 === count2 ){
+                document.getElementById("table").style.borderColor="red";
+            }else document.getElementById("table").style.borderColor="blue"
+        }
+        function click2() {
+            document.getElementById("lower").src=arr2[count2];
+            count2++;
+            if(count2 == 2){
+                count2 = 0;
+            }
+            if(count1 === count2 ){
+                document.getElementById("table").style.borderColor="red";
+            }else document.getElementById("table").style.borderColor="blue"
+        }
+
+    </script>
+</body>
+</html>
